@@ -1,100 +1,48 @@
-// === Smooth scroll for [data-scroll] triggers ===============================
+// 부드러운 스크롤 이동 (버튼/링크 data-scroll)
 document.addEventListener("click", (e) => {
   const t = e.target.closest("[data-scroll]");
   if (!t) return;
-
   const sel = t.getAttribute("data-scroll");
-  const el = sel && document.querySelector(sel);
+  const el = document.querySelector(sel);
   if (!el) return;
-
   e.preventDefault();
-  // 고정 헤더 보정: CSS에서 section에 scroll-margin-top을 주면 더 깔끔합니다.
-  // (예: .section { scroll-margin-top: 70px; })
   el.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
-// === Active state for nav links ============================================
-const sectionSelectors = ["#intro", "#roadmap", "#skills", "#projects", "#contact"];
-let sections = [];
-let navLinks = [];
+// 네비게이션 active 처리 + 스크롤 위치 반영
+const sections = ["#intro", "#roadmap", "#skills", "#projects", "#contact"].map((s) =>
+  document.querySelector(s)
+);
+const navLinks = Array.from(document.querySelectorAll(".main-nav a"));
 
-function initNavTracking() {
-  sections = sectionSelectors
-    .map((sel) => document.querySelector(sel))
-    .filter(Boolean);
-
-  navLinks = Array.from(document.querySelectorAll(".main-nav a"));
-
-  // 초기 계산 및 바인딩
-  recalcSectionTops();
-  onScroll(); // 초기 활성화 상태 적용
-}
-
-let sectionTops = [];
-function recalcSectionTops() {
-  // 각 섹션의 문서 기준 Y좌표 캐시
-  sectionTops = sections.map((sec) => sec.offsetTop);
-}
-
-let ticking = false;
-function handleScroll() {
-  if (!ticking) {
-    ticking = true;
-    requestAnimationFrame(() => {
-      onScroll();
-      ticking = false;
-    });
+const onScroll = () => {
+  const pos = window.scrollY + 80; // 헤더 높이 보정
+  let current = sections[0].id;
+  for (const sec of sections) {
+    if (!sec) continue;
+    if (pos >= sec.offsetTop) current = sec.id;
   }
-}
-
-function onScroll() {
-  if (!sections.length) return;
-
-  // 헤더 높이 보정
-  const pos = window.scrollY + 70;
-  const docBottom = window.scrollY + window.innerHeight;
-  const isAtBottom = Math.abs(docBottom - document.documentElement.scrollHeight) < 2;
-
-  let currentIdx = 0;
-
-  // 현재 스크롤 위치에 가장 가까운 섹션 인덱스 찾기
-  for (let i = 0; i < sectionTops.length; i++) {
-    if (pos >= sectionTops[i]) currentIdx = i;
-    else break;
-  }
-
-  // 페이지 맨 하단에 닿았을 때 마지막 섹션을 확실히 활성화
-  if (isAtBottom) currentIdx = sections.length - 1;
-
-  const currentId = sections[currentIdx].id;
-
   navLinks.forEach((a) => {
-    a.classList.toggle("active", a.getAttribute("href") === `#${currentId}`);
+    a.classList.toggle("active", a.getAttribute("href") === `#${current}`);
   });
-}
+};
+window.addEventListener("scroll", onScroll);
+onScroll();
 
-// 바인딩
-window.addEventListener("scroll", handleScroll);
-window.addEventListener("resize", () => {
-  recalcSectionTops();
-  onScroll();
+// 맨 위로 버튼
+document.getElementById("goTop")?.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// 폰트/이미지 로드 후 레이아웃 변동을 대비해서 한 번 더 계산
-window.addEventListener("load", () => {
-  recalcSectionTops();
-  onScroll();
-});
-
-// 해시 진입 시 초기 활성화
-if (location.hash) {
-  window.addEventListener("DOMContentLoaded", onScroll);
-}
-
-// === Go to top button =======================================================
-const goTopBtn = document.getElementById("goTop");
-if (goTopBtn) {
-  goTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+// Scroll reveal (IntersectionObserver)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in-view");
+      observer.unobserve(entry.target); // 한 번만 실행
+    }
   });
-}
+}, { threshold: 0.1, rootMargin: "0px 0px -10% 0px" });
+
+document.querySelectorAll(".reveal-up, .reveal-left, .reveal-right, .reveal-scale")
+  .forEach((el) => observer.observe(el));

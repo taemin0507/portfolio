@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background: #f6f8fb;
   color: #1f2937;
@@ -14,7 +10,8 @@ body {
   line-height: 1.6;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -36,7 +33,7 @@ strong {
   font-family: "Open Sans", sans-serif;
 }
 
-/* 스킵 링크 */
+/* ===== Skip link (선택사항, 접근성용) ===== */
 .skip {
   position: absolute;
   left: -9999px;
@@ -53,7 +50,7 @@ strong {
   z-index: 1000;
 }
 
-/* 포커스 가시성 */
+/* 포커스 표시 */
 :focus-visible {
   outline: 3px solid #0ea5e9;
   outline-offset: 2px;
@@ -104,7 +101,7 @@ strong {
 }
 
 .btn-primary:hover {
-  background: #2563eb;
+  background-color: #2563eb;
   border-color: #2563eb;
   transform: translateY(-2px);
   box-shadow: 0 2px 8px rgba(17, 24, 39, .06);
@@ -125,7 +122,7 @@ a.btn:focus-visible {
   box-shadow: 0 0 0 3px rgba(14, 165, 233, .35);
 }
 
-/* 1) Header (60px fixed) */
+/* Header */
 .site-header {
   position: fixed;
   top: 0;
@@ -161,10 +158,6 @@ a.btn:focus-visible {
 
 .brand .seed {
   margin-right: 2px;
-}
-
-main {
-  scroll-snap-type: y proximity;   /* or mandatory; 너무 강하면 proximity 추천 */
 }
 
 .main-nav ul {
@@ -206,30 +199,27 @@ main {
 
 .main-nav a.active::after {
   width: 100%;
-  box-shadow: 0 1px 0 rgba(0,0,0,.02) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .02) inset;
 }
 
-/* 2) Hero */
+/* Hero */
 .hero {
   margin-top: 60px;
+  min-height: calc(90vh - 60px);
   background: linear-gradient(90deg, #eef7ff, #fff);
-  display: flex;            
+  display: flex;
   align-items: center;
-}
-
-.hero, .section {
-  scroll-snap-align: start;
 }
 
 .hero-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 70px 0;
+  padding: 40px 0;
 }
 
 .hero-text h1 {
-  font-size: 36px;
+  font-size: 32px;
   margin: 0 0 8px 0;
 }
 
@@ -274,18 +264,18 @@ main {
   box-shadow: 0 6px 14px rgba(0, 0, 0, .08);
 }
 
-/* 3) Sections */
+/* Section */
 .section {
-  min-height: 100vh;
-  padding: 100px 0;
+  min-height: 90vh;
+  padding: 60px 0;
   scroll-margin-top: 70px;
-    display: flex;
-  align-items: center;  
+  display: flex;
+  align-items: center;
 }
 
-.section > .wrap,
-.hero > .wrap {
-  width: 1200px;               /* 기존 레이아웃 유지 */
+.section>.wrap,
+.hero>.wrap {
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -294,7 +284,7 @@ main {
 }
 
 .section-title {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 800;
   text-align: center;
   margin: 0 0 30px 0;
@@ -310,7 +300,7 @@ main {
   margin: 18px auto 0;
 }
 
-/* 4) Roadmap */
+/* Roadmap */
 .roadmap-list {
   display: flex;
   justify-content: space-between;
@@ -345,7 +335,7 @@ main {
   box-shadow: 0 6px 14px rgba(0, 0, 0, .08);
 }
 
-/* 5) Skills */
+/* Skills */
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -371,7 +361,7 @@ main {
   background: #f3e8ff;
 }
 
-/* 6) Projects */
+/* Projects */
 .proj-card {
   display: flex;
   gap: 16px;
@@ -423,7 +413,7 @@ main {
   gap: 8px;
 }
 
-/* 7) Contact */
+/* Contact */
 .contact-card {
   width: 700px;
   margin: 0 auto;
@@ -457,7 +447,7 @@ main {
   border-bottom-color: #7c3aed;
 }
 
-/* 8) Footer */
+/* Footer */
 .site-footer {
   background: #ffffff;
   color: #6b7280;
@@ -482,16 +472,10 @@ main {
 .go-top:hover {
   background: #f8fafc;
   transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(17, 24, 39, .06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
 }
 
-/* 9) 유틸/애니메이션 */
-.badge,
-.btn,
-.thumb {
-  user-select: none;
-}
-
+/* Animation */
 @keyframes flash {
 
   0%,
@@ -511,4 +495,69 @@ main {
   animation-duration: .5s;
   animation-iteration-count: 2;
   animation-timing-function: cubic-bezier(.43, .19, .02, 1);
+}
+
+/* Reveal Animations */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(.96);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.in-view.reveal-up,
+.in-view.reveal-left,
+.in-view.reveal-right,
+.in-view.reveal-scale {
+  opacity: 1;
+  transform: none;
+}
+
+.stagger>*:nth-child(1) {
+  transition-delay: .05s;
+}
+
+.stagger>*:nth-child(2) {
+  transition-delay: .15s;
+}
+
+.stagger>*:nth-child(3) {
+  transition-delay: .25s;
+}
+
+.stagger>*:nth-child(4) {
+  transition-delay: .35s;
+}
+
+.stagger>*:nth-child(5) {
+  transition-delay: .45s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
