@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,8 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;800&family=Open+Sans:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/main.css" />
@@ -26,6 +26,7 @@
   <!-- Script -->
   <script defer src="js/main.js"></script>
 </head>
+
 <body>
   <!-- Skip link -->
   <a class="skip" href="#main">본문 바로가기</a>
@@ -54,9 +55,19 @@
     <!-- HERO / INTRO -->
     <section id="intro" class="hero" aria-labelledby="intro-title">
       <div class="wrap hero-inner">
-        <div class="hero-text">
+        <div class="hero-text reveal-up">
           <h1 id="intro-title">
-            안녕하세요! <span class="badge">개발자 꿈나무</span> <strong>Taemin</strong> 입니다.
+            <span class="animate-flash" style="animation-delay:0.05s">안</span>
+            <span class="animate-flash" style="animation-delay:0.15s">녕</span>
+            <span class="animate-flash" style="animation-delay:0.25s">하</span>
+            <span class="animate-flash" style="animation-delay:0.35s">세</span>
+            <span class="animate-flash" style="animation-delay:0.45s">요!</span>
+            <br>
+            <span class="badge">개발자 꿈나무</span>
+            <strong class="animate-flash" style="animation-delay:0.6s">Taemin</strong>
+            <span class="animate-flash" style="animation-delay:0.75s">입</span>
+            <span class="animate-flash" style="animation-delay:0.9s">니</span>
+            <span class="animate-flash" style="animation-delay:1.05s">다.</span>
           </h1>
           <p class="lead">
             HTML/CSS/JS로 작게 시작해서 <span class="hl">매일 1줄 성장</span>을 기록합니다.<br>
@@ -65,34 +76,35 @@
 
           <div class="cta">
             <a class="btn btn-primary" href="#projects" data-scroll="#projects">프로젝트 보기</a>
-            <a class="btn btn-ghost" href="https://github.com/yourid" target="_blank" rel="noreferrer noopener">GitHub</a>
+            <a class="btn btn-ghost" href="https://github.com/taemin0507" target="_blank"
+              rel="noreferrer noopener">GitHub</a>
           </div>
         </div>
 
-        <div class="hero-card" aria-label="현재 레벨">
+        <div class="hero-card reveal-scale" aria-label="현재 레벨">
           <div class="level">Lv.0 → Lv.1</div>
           <div class="note">“기초부터 탄탄히!”</div>
         </div>
       </div>
     </section>
 
-    <!-- ROADMAP (새 구성) -->
+    <!-- ROADMAP -->
     <section id="roadmap" class="section" aria-labelledby="roadmap-title">
       <div class="wrap">
-        <h2 id="roadmap-title" class="section-title">ROADMAP</h2>
+        <h2 id="roadmap-title" class="section-title reveal-up">ROADMAP</h2>
 
-        <ol class="roadmap-list">
-          <li>
+        <ol class="roadmap-list stagger">
+          <li class="reveal-up">
             <div class="step">STEP 1</div>
             <h3>기초 다지기</h3>
             <p>시맨틱 마크업 · 박스모델 · 이벤트</p>
           </li>
-          <li>
+          <li class="reveal-up">
             <div class="step">STEP 2</div>
             <h3>작은 프로젝트</h3>
             <p>ToDo · 갤러리 · 탭/모달 등 UI 컴포넌트</p>
           </li>
-          <li>
+          <li class="reveal-up">
             <div class="step">STEP 3</div>
             <h3>심화와 기록</h3>
             <p>리팩토링 · 접근성 · 성능 · 블로그 기록</p>
@@ -104,22 +116,22 @@
     <!-- SKILLS -->
     <section id="skills" class="section section-alt" aria-labelledby="skills-title">
       <div class="wrap">
-        <h2 id="skills-title" class="section-title">SKILLS</h2>
+        <h2 id="skills-title" class="section-title reveal-up">SKILLS</h2>
 
-        <ul class="skill-grid">
-          <li>
+        <ul class="skill-grid stagger">
+          <li class="reveal-up">
             <h3>HTML</h3>
             <p>의미있는 태그로 구조 설계</p>
           </li>
-          <li>
+          <li class="reveal-up">
             <h3>CSS</h3>
             <p>고정 레이아웃 + 깔끔한 타이포</p>
           </li>
-          <li>
+          <li class="reveal-up">
             <h3>JavaScript</h3>
             <p>이벤트 · 상태 · DOM 제어</p>
           </li>
-          <li>
+          <li class="reveal-up">
             <h3>학습 습관</h3>
             <p>회고/메모로 작은 습득을 누적</p>
           </li>
@@ -130,9 +142,9 @@
     <!-- PROJECTS -->
     <section id="projects" class="section" aria-labelledby="projects-title">
       <div class="wrap">
-        <h2 id="projects-title" class="section-title">PROJECTS</h2>
+        <h2 id="projects-title" class="section-title reveal-up">PROJECTS</h2>
 
-        <article class="proj-card">
+        <article class="proj-card reveal-left">
           <div class="thumb" aria-hidden="true">#1</div>
           <div class="body">
             <h3>할 일 메모장</h3>
@@ -148,7 +160,7 @@
           </div>
         </article>
 
-        <article class="proj-card">
+        <article class="proj-card reveal-right">
           <div class="thumb" aria-hidden="true">#2</div>
           <div class="body">
             <h3>사진 갤러리</h3>
@@ -163,7 +175,7 @@
           </div>
         </article>
 
-        <article class="proj-card">
+        <article class="proj-card reveal-left">
           <div class="thumb" aria-hidden="true">#3</div>
           <div class="body">
             <h3>스크롤 이동 버튼</h3>
@@ -183,16 +195,17 @@
     <!-- CONTACT -->
     <section id="contact" class="section section-alt" aria-labelledby="contact-title">
       <div class="wrap">
-        <h2 id="contact-title" class="section-title">CONTACT</h2>
+        <h2 id="contact-title" class="section-title reveal-up">CONTACT</h2>
 
-        <div class="contact-card">
+        <div class="contact-card reveal-up">
           <div class="row">
             <span class="label">Email</span>
             <a href="mailto:lee28652@naver.com" class="value">lee28652@naver.com</a>
           </div>
           <div class="row">
             <span class="label">GitHub</span>
-            <a href="https://github.com/taemin0507" target="_blank" rel="noreferrer noopener" class="value">github.com/taemin0507</a>
+            <a href="https://github.com/taemin0507" target="_blank" rel="noreferrer noopener"
+              class="value">github.com/taemin0507</a>
           </div>
           <div class="row">
             <span class="label">Blog</span>
@@ -211,4 +224,5 @@
     </div>
   </footer>
 </body>
+
 </html>
