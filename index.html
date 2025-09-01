@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>LeeTaemin | Developer Sprout</title>
+
+  <!-- 파비콘(원하면 교체) -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- reset -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
+
+  <!-- Fonts: Noto Sans KR + Open Sans(영문용) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;800&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Script -->
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="skip" href="#main">본문 바로가기</a>
+
+  <!-- HEADER (60px fixed) -->
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a href="#" class="brand" aria-label="Taemin 홈">
+        <span class="seed" aria-hidden="true">🌱</span> Taemin
+      </a>
+
+      <nav class="main-nav" aria-label="주요 메뉴">
+        <ul>
+          <li><a href="#intro" data-scroll="#intro">INTRO</a></li>
+          <li><a href="#roadmap" data-scroll="#roadmap">ROADMAP</a></li>
+          <li><a href="#skills" data-scroll="#skills">SKILLS</a></li>
+          <li><a href="#projects" data-scroll="#projects">PROJECTS</a></li>
+          <li><a href="#contact" data-scroll="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main">
+    <!-- HERO / INTRO -->
+    <section id="intro" class="hero" aria-labelledby="intro-title">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <h1 id="intro-title">
+            안녕하세요! <span class="badge">개발자 꿈나무</span> <strong>Taemin</strong> 입니다.
+          </h1>
+          <p class="lead">
+            HTML/CSS/JS로 작게 시작해서 <span class="hl">매일 1줄 성장</span>을 기록합니다.<br>
+            오늘은 어제보다 한 걸음 더 👣
+          </p>
+
+          <div class="cta">
+            <a class="btn btn-primary" href="#projects" data-scroll="#projects">프로젝트 보기</a>
+            <a class="btn btn-ghost" href="https://github.com/yourid" target="_blank" rel="noreferrer noopener">GitHub</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="현재 레벨">
+          <div class="level">Lv.0 → Lv.1</div>
+          <div class="note">“기초부터 탄탄히!”</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP (새 구성) -->
+    <section id="roadmap" class="section" aria-labelledby="roadmap-title">
+      <div class="wrap">
+        <h2 id="roadmap-title" class="section-title">ROADMAP</h2>
+
+        <ol class="roadmap-list">
+          <li>
+            <div class="step">STEP 1</div>
+            <h3>기초 다지기</h3>
+            <p>시맨틱 마크업 · 박스모델 · 이벤트</p>
+          </li>
+          <li>
+            <div class="step">STEP 2</div>
+            <h3>작은 프로젝트</h3>
+            <p>ToDo · 갤러리 · 탭/모달 등 UI 컴포넌트</p>
+          </li>
+          <li>
+            <div class="step">STEP 3</div>
+            <h3>심화와 기록</h3>
+            <p>리팩토링 · 접근성 · 성능 · 블로그 기록</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-alt" aria-labelledby="skills-title">
+      <div class="wrap">
+        <h2 id="skills-title" class="section-title">SKILLS</h2>
+
+        <ul class="skill-grid">
+          <li>
+            <h3>HTML</h3>
+            <p>의미있는 태그로 구조 설계</p>
+          </li>
+          <li>
+            <h3>CSS</h3>
+            <p>고정 레이아웃 + 깔끔한 타이포</p>
+          </li>
+          <li>
+            <h3>JavaScript</h3>
+            <p>이벤트 · 상태 · DOM 제어</p>
+          </li>
+          <li>
+            <h3>학습 습관</h3>
+            <p>회고/메모로 작은 습득을 누적</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="wrap">
+        <h2 id="projects-title" class="section-title">PROJECTS</h2>
+
+        <article class="proj-card">
+          <div class="thumb" aria-hidden="true">#1</div>
+          <div class="body">
+            <h3>할 일 메모장</h3>
+            <p class="meta">1인 · 3일 · HTML/CSS/JS</p>
+            <ul class="desc">
+              <li>Enter로 추가 / 클릭으로 완료 처리</li>
+              <li>localStorage로 데이터 저장</li>
+            </ul>
+            <div class="links">
+              <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer noopener">코드</a>
+              <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer noopener">데모</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="thumb" aria-hidden="true">#2</div>
+          <div class="body">
+            <h3>사진 갤러리</h3>
+            <p class="meta">1인 · 2일 · HTML/CSS</p>
+            <ul class="desc">
+              <li>3열 고정 그리드 · 썸네일 hover</li>
+            </ul>
+            <div class="links">
+              <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer noopener">코드</a>
+              <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer noopener">데모</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card">
+          <div class="thumb" aria-hidden="true">#3</div>
+          <div class="body">
+            <h3>스크롤 이동 버튼</h3>
+            <p class="meta">1인 · 1일 · JS</p>
+            <ul class="desc">
+              <li>맨 위/아래로 부드러운 이동</li>
+            </ul>
+            <div class="links">
+              <button class="btn btn-ghost" data-scroll="#intro">맨 위</button>
+              <button class="btn btn-primary" data-scroll="#contact">연락처</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title" class="section-title">CONTACT</h2>
+
+        <div class="contact-card">
+          <div class="row">
+            <span class="label">Email</span>
+            <a href="mailto:lee28652@naver.com" class="value">lee28652@naver.com</a>
+          </div>
+          <div class="row">
+            <span class="label">GitHub</span>
+            <a href="https://github.com/taemin0507" target="_blank" rel="noreferrer noopener" class="value">github.com/taemin0507</a>
+          </div>
+          <div class="row">
+            <span class="label">Blog</span>
+            <a href="#" target="_blank" rel="noreferrer noopener" class="value">블로그가 들어갈 자리입니다.</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap small">
+      © 2025 Taemin. All rights reserved.
+      <button id="goTop" class="go-top" aria-label="맨 위로">↑</button>
+    </div>
+  </footer>
+</body>
+</html>
