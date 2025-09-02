@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -325,23 +325,25 @@ a.btn:focus-visible {
   flex-direction: column;
   justify-content: space-evenly;
 }
-.about-text .slogan{
+
+.about-text .slogan {
   font-size: 35px;
   font-weight: bold;
 }
-.about-text .h3{
+
+.about-text .h3 {
   font-size: 20px;
   font-weight: 600;
 }
 
-.about-text .h3{
+.about-text .h3 {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 16px;
 }
 
-.about-text li{
-   line-height: 1.8;
+.about-text li {
+  line-height: 1.8;
 }
 
 #about .about-btn {
@@ -477,6 +479,7 @@ a.btn:focus-visible {
   padding: 18px 0 40px;
   position: relative;
 }
+
 /* SCROLL TO TOP */
 #toTop {
   width: 42px;
@@ -500,6 +503,7 @@ a.btn:focus-visible {
   transform: translateX(100px);
   transition: 1s;
 }
+
 #toTop .material-symbols-outlined {
   /* 수직 정렬 맞추기 */
   /* display: block; */
