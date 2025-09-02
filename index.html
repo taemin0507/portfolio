@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" />
 
   <!-- Fonts: Noto Sans KR + Open Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;800&family=Open+Sans:wght@400;700&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+
+
   <!-- ScrollMagic CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 
@@ -83,9 +86,11 @@
               rel="noreferrer noopener">GitHub</a>
           </div>
         </div>
+        <div class="trans">
         <div class="hero-card reveal-scale" aria-label="현재 레벨">
           <div class="level">Lv.0 → Lv.1</div>
           <div class="note">“기초부터 탄탄히!”</div>
+        </div>
         </div>
       </div>
     </section>
@@ -96,10 +101,10 @@
         <h2 id="about-title" class="section-title reveal-up">ABOUT</h2>
         <div class="about-box reveal-right">
           <div class="about-img">
-            <img src="./images/pro.jpg" alt="프로필">
+            <img src="./images/pro.jpg" alt="프로필" class="trans">
           </div>
-          <div class="about-text">
-            <strong class="slogan font-en">시간이 금이다</strong>
+          <div class="about-text trans">
+            <strong class="slogan font-en">시간은 금이다</strong>
             <h3 class="font-en">LEE TAE MIN (2001.05.07)</h3>
             <div>
               <h4 class="font-en">EDUCATION</h4>
@@ -113,7 +118,9 @@
         <!-- 연락처 버튼 -->
         <div class="about-btn font-en reveal-up">
           <a href="#contact">
-            <img src="images/icon/icon_contact.png" alt="연락처">CONTACT
+            <div class="trans">
+              <img src="images/icon/icon_contact.png" alt="연락처">CONTACT
+            </div>
           </a>
         </div>
       </div>
@@ -126,20 +133,28 @@
         <h2 id="skills-title" class="section-title reveal-up">SKILLS</h2>
         <ul class="skill-grid stagger">
           <li class="reveal-up">
-            <h3>HTML</h3>
-            <p>의미있는 태그로 구조 설계</p>
+            <div class="trans">
+              <h3>HTML</h3>
+              <p>의미있는 태그로 구조 설계</p>
+            </div>
           </li>
           <li class="reveal-up">
-            <h3>CSS</h3>
-            <p>고정 레이아웃 + 깔끔한 타이포</p>
+            <div class="trans">
+              <h3>CSS</h3>
+              <p>고정 레이아웃 + 깔끔한 타이포</p>
+            </div>
           </li>
           <li class="reveal-up">
-            <h3>JavaScript</h3>
-            <p>이벤트 · 상태 · DOM 제어</p>
+            <div class="trans">
+              <h3>JavaScript</h3>
+              <p>이벤트 · 상태 · DOM 제어</p>
+            </div>
           </li>
           <li class="reveal-up">
-            <h3>학습 습관</h3>
-            <p>회고/메모로 작은 습득을 누적</p>
+            <div class="trans">
+              <h3>학습 습관</h3>
+              <p>회고/메모로 작은 습득을 누적</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -149,52 +164,51 @@
     <section id="projects" class="section scroll-spy" aria-labelledby="projects-title">
       <div class="wrap">
         <h2 id="projects-title" class="section-title reveal-up">PROJECTS</h2>
-
-        <article class="proj-card reveal-left">
-          <div class="thumb" aria-hidden="true">#1</div>
+        <article class=" proj-card reveal-left">
+          <div class="thumb" aria-hidden="true">No Image</div>
           <div class="body">
-            <h3>할 일 메모장</h3>
-            <p class="meta">1인 · 3일 · HTML/CSS/JS</p>
+            <h3>블록체인 기반 전자투표 시스템</h3>
+            <p class="meta">Team : 김강송이 / 블록체인, MySQL, SpringBoot</p>
             <ul class="desc">
-              <li>Enter로 추가 / 클릭으로 완료 처리</li>
-              <li>localStorage로 데이터 저장</li>
+              <li>캡스톤 디자인: 블록체인을 기반으로 한 전자 투표 시스템</li>
+              <li>수상 : 세명대학교 IT총학장상(최우수)</li>
             </ul>
             <div class="links">
-              <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer noopener">코드</a>
-              <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer noopener">데모</a>
+              <a class="btn btn-ghost" href="https://github.com/taemin0507/votingv2" target="_blank" rel="noreferrer noopener">코드</a>
+              <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer noopener">페이지</a>
             </div>
-          </div>
         </article>
 
         <article class="proj-card reveal-right">
-          <div class="thumb" aria-hidden="true">#2</div>
+          <div class="thumb" aria-hidden="true">No Image</div>
           <div class="body">
-            <h3>사진 갤러리</h3>
-            <p class="meta">1인 · 2일 · HTML/CSS</p>
+            <h3>추가 예정</h3>
+            <p class="meta">추가 예정</p>
             <ul class="desc">
-              <li>3열 고정 그리드 · 썸네일 hover</li>
+              <li>추가 예정</li>
             </ul>
             <div class="links">
               <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer noopener">코드</a>
-              <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer noopener">데모</a>
+              <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer noopener">페이지</a>
             </div>
           </div>
         </article>
 
         <article class="proj-card reveal-left">
-          <div class="thumb" aria-hidden="true">#3</div>
+          <div class="thumb" aria-hidden="true">No Image</div>
           <div class="body">
-            <h3>스크롤 이동 버튼</h3>
-            <p class="meta">1인 · 1일 · JS</p>
+            <h3>추가 예정</h3>
+            <p class="meta">추가 예정</p>
             <ul class="desc">
-              <li>맨 위/아래로 부드러운 이동</li>
+              <li>추가 예정</li>
             </ul>
             <div class="links">
-              <button class="btn btn-ghost" data-scroll="#intro">맨 위</button>
-              <button class="btn btn-primary" data-scroll="#contact">연락처</button>
+              <button class="btn btn-ghost" href="#" target="_blank" rel="noreferrer noopener">코드</button>
+              <button class="btn btn-primary" href="#" target="_blank" rel="noreferrer noopener">페이지</button>
             </div>
           </div>
         </article>
+      </div>
       </div>
     </section>
 
@@ -202,24 +216,26 @@
     <section id="contact" class="section section-alt scroll-spy" aria-labelledby="contact-title">
       <div class="wrap">
         <h2 id="contact-title" class="section-title reveal-up">CONTACT</h2>
-        <div class="contact-card reveal-up">
-          <div class="row">
-            <span class="label">Email</span>
-            <a href="mailto:lee28652@naver.com" class="value">lee28652@naver.com</a>
-          </div>
-          <div class="row">
-            <span class="label">GitHub</span>
-            <a href="https://github.com/taemin0507" target="_blank" rel="noreferrer noopener"
-              class="value">github.com/taemin0507</a>
-          </div>
-          <div class="row">
-            <span class="label">Instagram</span>
-            <a href="https://www.instagram.com/tae_min.i/" target="_blank" rel="noreferrer noopener"
-              class="value">taemin.i</a>
-          </div>
-          <div class="row">
-            <span class="label">Phone Number</span>
-            <a href="#" target="_blank" rel="noreferrer noopener" class="value">010-8933-2865</a>
+        <div class="trans">
+          <div class="contact-card reveal-up">
+            <div class="row">
+              <span class="label">Email</span>
+              <a href="mailto:lee28652@naver.com" class="value">lee28652@naver.com</a>
+            </div>
+            <div class="row">
+              <span class="label">GitHub</span>
+              <a href="https://github.com/taemin0507" target="_blank" rel="noreferrer noopener"
+                class="value">github.com/taemin0507</a>
+            </div>
+            <div class="row">
+              <span class="label">Instagram</span>
+              <a href="https://www.instagram.com/tae_min.i/" target="_blank" rel="noreferrer noopener"
+                class="value">taemin.i</a>
+            </div>
+            <div class="row">
+              <span class="label">Phone Number</span>
+              <a href="#" target="_blank" rel="noreferrer noopener" class="value">010-8933-2865</a>
+            </div>
           </div>
         </div>
       </div>

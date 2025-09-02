@@ -9,7 +9,7 @@ html {
 body {
   background: #f6f8fb;
   color: #1f2937;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Noto Sans KR",sans-serif;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -35,6 +35,14 @@ strong {
 
 .font-en {
   font-family: "Open Sans", sans-serif;
+}
+
+.trans{
+  transition: 2s;
+}
+
+.trans:hover{
+  transform: scale(1.1);
 }
 
 /* ===== Skip link (선택사항, 접근성용) ===== */
@@ -502,6 +510,10 @@ a.btn:focus-visible {
   opacity: 0;
   transform: translateX(100px);
   transition: 1s;
+}
+
+#toTop:hover {
+  background-color: #e5e7eb;
 }
 
 #toTop .material-symbols-outlined {
