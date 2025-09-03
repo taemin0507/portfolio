@@ -591,34 +591,57 @@ header .btn-hamburger .material-symbols-outlined {
     letter-spacing: 10px;
   }
 
+  .brhidden {
+    display: inline;
+  }
+
+  #intro-title {
+    width: 80%;
+  }
+
+  .lead {
+    width: 80%;
+  }
+
   .hero-inner {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  .cta{
+  .cta {
     display: flex;
     justify-content: center;
   }
-  .about-box{
+
+  .about-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
   }
-  .about-box .about-text{
+
+  .about-box .about-text {
     width: 80%;
   }
-  .skill-grid{
+
+  .about-img img {
+    width: 300px;
+  }
+
+  .skill-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .skill-grid li{
+
+  .skill-grid li {
     width: 80%;
   }
-  .contact-card{
+  .projectbox{
+    width: 80%;
+  }
+  .contact-card {
     width: 80%;
   }
 }
