@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -592,7 +593,7 @@ header .btn-hamburger .material-symbols-outlined {
   }
 
   .brhidden {
-    display: inline;
+    display: inline !important;
   }
 
   #intro-title {
@@ -641,19 +642,22 @@ header .btn-hamburger .material-symbols-outlined {
   .skill-grid li {
     width: 80%;
   }
-  .projectbox{
+
+  .projectbox {
     width: 80%;
     margin: 0 auto;
   }
+
   .contact-card {
     width: 80%;
   }
+
   .ellipsis {
-  width: 150px;           /* 박스 너비 지정 (필수) */
-  white-space: nowrap;    /* 줄바꿈 방지 */
-  overflow: hidden;       /* 넘친 텍스트 숨기기 */
-  text-overflow: ellipsis;/* ... 으로 처리 */
-}
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 
