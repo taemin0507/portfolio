@@ -649,7 +649,7 @@ header .btn-hamburger .material-symbols-outlined {
     width: 80%;
   }
   .ellipsis {
-  width: 200px;           /* 박스 너비 지정 (필수) */
+  width: 150px;           /* 박스 너비 지정 (필수) */
   white-space: nowrap;    /* 줄바꿈 방지 */
   overflow: hidden;       /* 넘친 텍스트 숨기기 */
   text-overflow: ellipsis;/* ... 으로 처리 */
