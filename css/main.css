@@ -627,6 +627,7 @@ header .btn-hamburger .material-symbols-outlined {
 
   .about-img img {
     width: 300px;
+    height: 300px;
   }
 
   .skill-grid {
@@ -640,6 +641,7 @@ header .btn-hamburger .material-symbols-outlined {
   }
   .projectbox{
     width: 80%;
+    margin: 0 auto;
   }
   .contact-card {
     width: 80%;
