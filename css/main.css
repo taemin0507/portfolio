@@ -656,6 +656,9 @@ header .btn-hamburger .material-symbols-outlined {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  #about .about-btn {
+    bottom: -60px;
+  }
 }
 
 
