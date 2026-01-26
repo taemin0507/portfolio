@@ -665,6 +665,83 @@ header .btn-hamburger .material-symbols-outlined {
 }
 
 
+/* PROJECT 카드형 레이아웃 */
+.proj-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 900px){
+  .proj-grid{ grid-template-columns: 1fr; }
+}
+
+.proj-card2{
+  overflow:hidden;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  background:#fff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.proj-thumb{
+  position: relative;
+  height: 150px;
+  background: #eef2f7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.proj-thumb-text{
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  opacity: .85;
+  font-size: 28px;
+}
+
+.proj-badge{
+  position:absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+}
+
+.proj-body{
+  padding: 18px 18px 16px;
+}
+
+.proj-title{
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.proj-meta{
+  font-size: 13px;
+  opacity: .75;
+  margin-bottom: 12px;
+}
+
+.proj-desc{
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 14px;
+  padding-left: 18px;
+}
+
+.proj-links{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
 
 

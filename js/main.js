@@ -130,7 +130,7 @@ dog.addEventListener("mouseenter", () => {
   dog.style.filter = "blur(5px)";
 
   setTimeout(() => {
-    dog.src = './images/fish.jpg';
+    dog.src = './images/lee.jpg';
     dog.style.filter = "";
   }, 1000);
 });
@@ -140,7 +140,7 @@ dog.addEventListener("mouseleave", () => {
   dog.style.filter = "blur(5px)";
 
    setTimeout(() => {
-  dog.src = './images/pro.jpg';
+  dog.src = './images/lee.jpg';
   dog.style.filter = ""; 
     }, 1000);
 });
